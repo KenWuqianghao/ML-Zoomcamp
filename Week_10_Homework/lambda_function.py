@@ -1,7 +1,7 @@
 import tflite_runtime.interpreter as tflite
 from keras_image_helper import create_preprocessor
 
-interpreter = tflite.Interpreter(model_path='cats-dogs-v2.tflite')
+interpreter = tflite.Interpreter(model_path='model.tflite')
 interpreter.allocate_tensors()
 
 input_index = interpreter.get_input_details()[0]['index']
